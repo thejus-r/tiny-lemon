@@ -1,0 +1,7 @@
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 200px;
+  background-color: #eeeeee;
+}
