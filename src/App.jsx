@@ -1,3 +1,4 @@
+import "./App.css"
 import Home from "./pages/Home/Home";
 import Reservations from "./pages/Reservations/Reservations";
 import { BrowserRouter, Route, Routes } from "react-router";
