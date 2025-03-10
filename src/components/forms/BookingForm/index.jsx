@@ -1,17 +1,18 @@
-import "./style.module.css"
+import { useState } from "react"
+import "./style.css"
 
 export default function BookingForm() {
+  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
   return <form>
-    <label htmlFor="res-date">Choose date</label>
-    <input type="date" id="res-date" />
+    <div className="input-field">
+      <label htmlFor="res-date">Choose date</label>
+      <input type="date" id="res-date" />
+    </div>
     <label htmlFor="res-time">Choose time</label>
-    <select id="res-time ">
-      <option>17:00</option>
-      <option>18:00</option>
-      <option>19:00</option>
-      <option>20:00</option>
-      <option>21:00</option>
-      <option>22:00</option>
+    <select id="res-time">
+      {availableTimes.map(time => (
+        <option key={time}>{time}</option>
+      ))}
     </select>
     <label htmlFor="guests">Number of guests</label>
     <input type="number" placeholder="1" min="1" max="10" id="guests" />
@@ -19,7 +20,6 @@ export default function BookingForm() {
     <select id="occasion"> <option>Birthday</option>
       <option>Anniversary</option>
     </select>
-    <input type="submit" value="Make Your reservation" />
+    <button type="submit">Make your reservations</button>
   </form>
 }
-

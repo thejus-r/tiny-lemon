@@ -1,0 +1,10 @@
+header {
+    color: #495E57;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
+
+.logo {
+    height: 100%;
+}
