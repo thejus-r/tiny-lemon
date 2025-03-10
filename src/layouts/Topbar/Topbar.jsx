@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Topbar.css";
 import Logo from "../../assets/Logo.svg";
 import MenuIcon from "../../assets/hamburger.svg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const Topbar = () => {
     const navigate = useNavigate();

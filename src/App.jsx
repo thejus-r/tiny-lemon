@@ -1,15 +1,22 @@
 import Home from "./pages/Home/Home";
 import Reservations from "./pages/Reservations/Reservations";
-import { Route, Routes } from "react-router-dom";
-import routeMap from "./utils/routeConfig";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Layout from "./layouts/Layout/Layout";
 
 const App = () => {
     return (
+
         <div>
-            <Routes>
-                <Route path={routeMap.get("home").path} element={<Home />} />
-                <Route path={routeMap.get("reservations").path} element={<Reservations />} />
-            </Routes>
+            <BrowserRouter>
+                <Layout>
+                    <Routes>
+                        <Route path={"/"} element={<Home />} />
+                        <Route path={"/reservations"} element={<Reservations />} />
+                    </Routes>
+                </Layout>
+            </BrowserRouter>
         </div>
     )
 }
+
+export default App
